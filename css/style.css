@@ -115,6 +115,15 @@ header .nav ul li a.active::before {
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .showcase .showcase-banner .img-box {
+    display: none;
+  }
+  .showcase .showcase-banner {
+    justify-content: center;
+  }
+}
+
 .showcase .showcase-banner .img-box img {
   width: 100%;
   height: 100%;
