@@ -1,0 +1,313 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+iframe {
+  border: 5px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem 5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 999;
+}
+
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #111;
+}
+
+header .title-icon {
+  width: 80px;
+  object-fit: cover;
+}
+
+header .title {
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+header .title-span {
+  color: red;
+  font-size: 1.5rem;
+}
+
+header .nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+header .nav ul li a:hover,
+header .nav ul li a:active,
+header .nav ul li a.active {
+  color: red;
+}
+
+header .nav ul li a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 300ms linear;
+}
+
+header .nav ul li a:hover::before,
+header .nav ul li a.active::before {
+  width: 100%;
+}
+
+/* showcase section */
+.showcase {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase .showcase-banner {
+  max-width: 1140px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.showcase .showcase-banner .img-box {
+  width: 450px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(5deg);
+  position: relative;
+}
+
+.showcase .showcase-banner .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 10px solid #fff;
+  position: relative;
+}
+
+.showcase .showcase-banner .img-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 10px solid #fff;
+  position: absolute;
+  top: 2rem;
+  right: -3rem;
+}
+
+.showcase .showcase-banner .banner-text {
+  max-width: 450px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.showcase .showcase-banner .banner-text h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 3px 3px 10px #000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.showcase .showcase-banner .banner-text h1 span {
+  font-size: 2rem;
+}
+
+.showcase .showcase-banner .banner-text p {
+  color: #fefefe;
+  font-size: 1.3rem;
+  text-shadow: 3px 3px 8px #111;
+}
+
+.showcase .showcase-banner .banner-text a,
+.showcase .about-banner .banner-text a {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 300ms;
+  animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.showcase .showcase-banner .banner-text a:hover,
+.showcase .about-banner .banner-text a:hover {
+  background-color: rgb(206, 0, 0);
+}
+
+.showcase .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase .carousel .carousel-item .img img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.showcase .carousel .carousel-item .img::before img {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  box-shadow: inset 100px 100px 200px rgba(0, 0, 0, 0.5);
+}
+
+/* cards section  */
+.cards-section {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.card-item {
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-item .card-title {
+  font-size: 1.3rem;
+  color: red;
+}
+
+.card-item p {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.card-item .img-box {
+  width: 100%;
+  height: 200px;
+  transition: 500ms;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+.card-item .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 500ms;
+}
+
+.card-item .img-box:hover img {
+  transform: scale(1.1);
+}
+
+.card-item .card-body {
+  padding: 0.8rem;
+  background-color: #fff;
+}
+
+/* footer section */
+footer {
+  background-color: rgb(182, 0, 0);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* About section styles */
+.parallax {
+  scroll-margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.tripsavvy.com/thmb/2JHXkgoi_2vj5kk6b3lZ6w7LYfk=/3008x2000/filters:no_upscale():max_bytes(150000):strip_icc()/DSC_0298-5c7d822946e0fb00018bd878.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 2rem;
+}
+
+.showcase .about-banner {
+  max-width: 650px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.showcase .about-banner .banner-text h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.showcase .about-banner .banner-text p {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.about-section {
+  position: relative;
+  scroll-margin-top: 60px;
+}
